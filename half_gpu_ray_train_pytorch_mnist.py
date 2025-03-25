@@ -161,7 +161,7 @@ def train_fashion_mnist(num_workers=4, gpus_per_worker=0.25, use_gpu=True):
 
 if __name__ == "__main__":
     num_workers = int(os.getenv("NUM_WORKERS", "4"))
-    gpus_per_worker = int(os.getenv("GPUS_PER_WORKER", "0.25"))
+    gpus_per_worker = float(os.getenv("GPUS_PER_WORKER", "0.25"))
     train_fashion_mnist(num_workers=num_workers, gpus_per_worker=gpus_per_worker)
 
 
